@@ -1,0 +1,239 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.logo {
+  width: 150px;
+  height: 60px;
+  border-radius: 12px;
+  overflow: hidden;
+  animation: glow 4s infinite ease-in-out;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 10px #10b981; }
+  50% { box-shadow: 0 0 25px #22d3ee; }
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1.2rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #22d3ee;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem 4rem;
+  background: radial-gradient(circle at top, #22d3ee33, transparent 70%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero h1 span {
+  color: #10b981;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #10b981;
+  color: #fff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta-button:hover {
+  background: #22d3ee;
+  transform: scale(1.05);
+}
+
+/* About */
+.about {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #22d3ee;
+}
+
+/* Gallery */
+.gallery {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.gallery h2 {
+  margin-bottom: 1.5rem;
+  color: #10b981;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: 0.4s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Presale Section */
+.presale {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.presale-box {
+  margin: 1rem auto;
+  padding: 1.5rem;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.wallet-address {
+  background: #0f172a;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-family: monospace;
+  word-break: break-all;
+  margin-bottom: 1rem;
+  color: #22d3ee;
+  border: 1px solid #22d3ee33;
+}
+
+.progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
+  margin-top: 1rem;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #22d3ee);
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+/* Community */
+.community {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.community h2 {
+  color: #22d3ee;
+}
+
+.join-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #22d3ee;
+  padding: 0.8rem 1.6rem;
+  border-radius: 25px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.join-button:hover {
+  background: #10b981;
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-links a img {
+  width: 40px;
+  margin: 0 10px;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 5px #22d3ee);
+}
+
+.social-links a img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px #10b981);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.2rem; }
+  .hero p { font-size: 1rem; }
+  nav { display: none; }
+  .gallery-grid img { height: 200px; }
+}
